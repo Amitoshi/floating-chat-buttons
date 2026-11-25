@@ -1,0 +1,23 @@
+.fcb-help-setting{display:grid;grid-template-columns:minmax(0,1fr) 28px;align-items:start;gap:8px;min-width:0;max-width:100%}
+.fcb-help-setting>.fcb-field,.fcb-help-setting>.fcb-switch-row{min-width:0;width:auto}
+.fcb-help-setting>.fcb-help-trigger{margin-top:0}
+.fcb-help-setting:has(>.fcb-field)>.fcb-help-trigger{margin-top:16px}
+.fcb-inline-fields>.fcb-help-setting{flex:1;min-width:0}
+.fcb-editor-actions>.fcb-help-setting{display:inline-grid;grid-template-columns:auto 28px;align-items:center}
+.fcb-help-trigger{display:inline-flex;align-items:center;justify-content:center;flex:0 0 26px;box-sizing:border-box;width:26px;height:26px;padding:0;border:1px solid #71877b;border-radius:50%;background:#f7faf8;color:#204c3a;font:700 16px Georgia,serif;cursor:help;line-height:1;touch-action:manipulation}
+.fcb-help-trigger:hover,.fcb-help-trigger[aria-expanded=true]{color:#fff;background:#204c3a;border-color:#204c3a}
+.fcb-help-trigger:focus-visible,.fcb-help-popover a:focus-visible,.fcb-help-close:focus-visible{outline:3px solid #a16207;outline-offset:3px}
+.fcb-help-popover{position:fixed;z-index:100101;box-sizing:border-box;width:380px;padding:20px;border:1px solid #82978a;border-radius:12px;background:#fff;color:#172e2a;box-shadow:0 10px 36px #102c252e;overflow:auto;overflow-wrap:anywhere;font:400 15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.fcb-help-popover[hidden]{display:none!important}
+.fcb-help-popover h4{margin:0 26px 12px 0;font-size:17px;line-height:1.4;color:#172e2a}
+.fcb-help-popover p{font-size:15px;line-height:1.6;margin:10px 0}
+.fcb-help-popover a{display:inline-block;color:#175139;font-weight:650;text-decoration:underline;padding:7px 0}
+.fcb-help-close{position:absolute;top:10px;right:10px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:0;border-radius:5px;background:#eef3ef;color:#172e2a;font-size:23px;cursor:pointer}
+.fcb-local-guide{margin:32px 0;max-width:1100px;font-size:16px;line-height:1.75;color:#172e2a}
+.fcb-local-guide>h2{font-size:28px;line-height:1.3}.fcb-local-guide p,.fcb-local-guide li{font-size:16px;line-height:1.75}
+.fcb-help-index{padding:18px 24px;border:1px solid #b7c8bc;border-radius:12px;background:#f4f8f4}.fcb-help-index ul{columns:2;column-gap:36px;margin:0;padding-left:20px}.fcb-help-index li{break-inside:avoid;margin-bottom:8px}
+.fcb-local-guide a{color:#175139;text-decoration:underline;text-underline-offset:3px}
+.fcb-help-topic{margin-top:24px;padding:26px 30px;border:1px solid #c5d1c8;border-radius:14px;background:#fff;scroll-margin-top:56px;overflow-wrap:anywhere}
+.fcb-help-topic:target{border-color:#204c3a;box-shadow:0 0 0 2px #204c3a22}.fcb-help-topic h3{font-size:24px;line-height:1.3;margin:4px 0 20px}.fcb-help-topic dl{margin:0 0 18px}.fcb-help-topic dt{font-weight:700;margin-top:18px}.fcb-help-topic dd{margin:3px 0 0}.fcb-help-category{font-weight:650;color:#4b6255;margin:0!important}
+@media(max-width:782px){.fcb-help-trigger{width:30px;height:30px}.fcb-help-setting{grid-template-columns:minmax(0,1fr) 30px}.fcb-help-index ul{columns:1}.fcb-help-topic{padding:20px}.fcb-help-topic h3{font-size:22px}.fcb-help-popover{padding:18px}}
+@media(max-width:600px){.fcb-admin .fcb-page-heading:has(>.fcb-help-setting){flex-direction:column;align-items:flex-start}.fcb-page-heading>.fcb-help-setting{max-width:100%}}

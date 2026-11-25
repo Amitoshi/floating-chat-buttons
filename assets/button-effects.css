@@ -1,0 +1,9 @@
+/* Rings are pseudo-elements: no permanent size/position change and no hit area. */
+.fcb-effect-host{position:relative;isolation:isolate}
+.fcb-effect-host::before,.fcb-effect-host::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;z-index:1}
+.fcb-attention-ripple::before,.fcb-attention-ripple::after{box-shadow:0 0 0 0 var(--fcb-effect-color,#2563eb);animation:fcb-water-ripple 1100ms cubic-bezier(.2,.6,.3,1) 2}
+.fcb-attention-ripple::after{animation-delay:250ms}
+.fcb-attention-pulse::after{box-shadow:0 0 0 0 var(--fcb-effect-color,#2563eb);animation:fcb-soft-pulse 1000ms ease-in-out 2}
+@keyframes fcb-water-ripple{0%{opacity:.48;box-shadow:0 0 0 0 var(--fcb-effect-color,#2563eb)}85%,100%{opacity:0;box-shadow:0 0 0 6px var(--fcb-effect-color,#2563eb)}}
+@keyframes fcb-soft-pulse{0%,100%{opacity:0;box-shadow:0 0 0 0 var(--fcb-effect-color,#2563eb)}50%{opacity:.32;box-shadow:0 0 7px 4px var(--fcb-effect-color,#2563eb)}}
+@media(prefers-reduced-motion:reduce){.fcb-effect-host::before,.fcb-effect-host::after{animation:none!important;opacity:0!important}}
